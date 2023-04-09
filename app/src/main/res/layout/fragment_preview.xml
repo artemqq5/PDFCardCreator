@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".presenter.ui.fragment.PreviewFragment">
+
+    <data>
+
+        <variable
+            name="nav"
+            type="Integer" />
+
+        <variable
+            name="bundle"
+            type="android.os.Bundle" />
+
+        <variable
+            name="mainTransition"
+            type="com.crecardbissnes.ebissnescard.domain.MainNavigateTransition" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_preview"
+        android:orientation="vertical">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="100dp"
+            android:backgroundTint="@color/sub_color"
+            android:elevation="20dp"
+            android:onClick="@{(view) -> mainTransition.transitionFragment(nav, bundle)}"
+            android:text="@string/create_pdf_business_card"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </FrameLayout>
+</layout>
